@@ -1,7 +1,6 @@
 {
   "name": "files",
   "version": "1.0.0",
-  "description": "",
   "main": "step1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/spencerTaira/node-files/issues"
   },
-  "homepage": "https://github.com/spencerTaira/node-files#readme"
+  "homepage": "https://github.com/spencerTaira/node-files#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.1.3"
+  }
 }
