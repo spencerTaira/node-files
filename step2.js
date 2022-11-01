@@ -11,12 +11,11 @@ const argv = process.argv;
  * error and exit the program.
  */
 
-
 async function cat(path) {
 
   try {
     const contents = await fsP.readFile(path, "utf8");
-    console.log(contents)
+    console.log(contents);
   } catch (err) {
     console.log(`Error reading ${path}`, err);
     process.exit(0);
@@ -34,22 +33,20 @@ async function webCat(url) {
   try {
     const resp = await axios.get(url);
     let html = resp.data;
-    console.log('html: ', html)
+    console.log('html: ', html);
 
   } catch (err) {
     console.log("Not a valid URL");
     process.exit(1);
   }
-
-
 }
 
 function readFileToConsole(path) {
 
   if (fs.existsSync(path)) {  //TODO: URL() with a try-catch
-    return cat(path)
+    return cat(path);
   } else {
-    return webCat(path)
+    return webCat(path);
   }
 
 }
